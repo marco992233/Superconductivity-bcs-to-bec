@@ -1,0 +1,231 @@
+
+\chapter{Superconductivity as a BEC of Pairs}
+In chapter \ref{Ch_2} we have shown that superconductivity originates from the pairing of electrons into correlated states known as \textit{Cooper pairs}.  
+Each pair carries charge \(2e\) and total spin zero\footnote{In the singlet case: two electrons with opposite spins $(\uparrow\downarrow)$ combine to give a total spin $J = 0$.} and thus behaves as a composite boson.  
+When cooled below a critical temperature \(T_c\), these composite bosons condense into a single macroscopic quantum state characterized by long-range phase coherence.  
+This condensed state constitutes the superconducting phase.
+
+\section{Macroscopic Analogy}
+From a macroscopic standpoint, superconductivity and Bose--Einstein condensation share the same fundamental feature: both arise from the occupation of a single quantum state by a macroscopic number of particles.  
+The key distinction lies in the microscopic mechanism that forms the condensed particles:  
+
+\begin{itemize}
+    \item \textbf{Bose--Einstein condensate:} In a conventional Bose gas, the constituent particles are \emph{elementary bosons} (e.g.\ atoms or photons) that condense directly into the lowest energy state below a critical temperature.
+
+    \item \textbf{Superconductor:} In a superconductor, the condensed entities are not elementary particles but \emph{composite bosons} (bound states of two electrons known as \emph{Cooper pairs}), each carrying charge \(2e\) and integer spin.
+    The condensation of these composite bosons into a single coherent quantum state produces the superconducting phase.
+\end{itemize}
+
+Hence, superconductivity can be viewed as a \textit{Bose--Einstein condensation of Cooper pairs}.
+
+The analogy is made even clearer through the order parameter formalism.  
+In BEC, the macroscopic wavefunction of the condensate is expressed as 
+\[
+\Psi(\mathbf{r}) = \sqrt{n_0(\mathbf{r})}\, e^{i\phi(\mathbf{r})},
+\]
+where \(n_0\) is the condensate density and \(\phi\) its global phase.  
+In a superconductor, the order parameter takes an analogous form,
+\[
+\Delta = |\Delta| e^{i\phi},
+\]
+whose magnitude \(|\Delta|\) measures the superconducting energy gap, and whose phase \(\phi\) defines the macroscopic coherence of the condensate.  
+Below the critical temperature \(T_c\), \(\Delta\) acquires a finite value, signalling the onset of long-range phase order and the spontaneous breaking of the global \(\mathrm{U}(1)\) gauge symmetry.  
+This broken symmetry gives rise to the collective quantum state responsible for superconductivity.
+
+Hence, while the mechanisms of pairing and condensation differ, their consequence is the same: a \textit{phase-coherent macroscopic quantum state}.  \\
+This correspondence naturally raises a question:
+\begin{center}
+\textit{Do the BCS and BEC descriptions represent two distinct phases, or merely two limits of a single underlying phenomenon?}
+\end{center}
+
+%\section{Weak- To Strong- Coupling Regime} %TO DO!! Choose one
+\section{The BCS-BEC Crossover}
+
+A unified description of superconductivity can be obtained by extending the Bose--Einstein condensation formalism to include systems of composite bosons whose dispersion relation depends on the strength of the underlying fermionic attraction. 
+
+\subsection*{General expression for the critical temperature.}
+The condensation temperature and the dimensionality dependence can be derived for a general dispersion relation of the form
+\[
+    \varepsilon_K = C_s K^s,
+\]
+where \(C_s\) is a dimensional constant and \(s\) defines how the excitation energy scales with momentum. For a $d$-dimensional system the critical temperature reads:
+\begin{equation}
+\boxed{
+    T_c = \frac{C_s}{k_B}
+    \left[
+        \frac{s\, \Gamma(d/2)\, (2\pi)^d\, n_B}
+             {2\, \pi^{d/2}\, \Gamma(d/s)\, g_{d/s}(1)}
+    \right]^{s/d}}\, ,
+    \label{eq:Tc_general_1}
+\end{equation}
+where \(n_B\) is the boson (or Cooper-pair) density and we recall $g_{d/s}$ is the Bose function of order $d/s$. Using the relation,
+\[
+g_{\sigma}(1) = \zeta(\sigma) \iff g_{d/s}(1) = \zeta(d/s) 
+\]
+\eqref{eq:Tc_general_1} can be equivalently written as:
+\begin{equation}
+\boxed{
+    T_c = \frac{C_s}{k_B}
+    \left[
+        \frac{s\, \Gamma(d/2)\, (2\pi)^d\, n_B}
+             {2\, \pi^{d/2}\, \Gamma(d/s)\, \zeta(d/s)}
+    \right]^{s/d}}\, ,
+    \label{eq:Tc_general_2}
+\end{equation}
+
+The condensation condition requires \(d/s > 1\), ensuring that the number integral converges [Eq.~\eqref{convergence}]. For the conventional case of quadratic dispersion, condensation is possible only if \(d > 2\), as we have already seen in section \ref{crit}. Hence, in strictly two-dimensional systems, the integral diverges and no finite critical temperature can exist.\\
+Then, 
+\begin{center}
+    \textit{How can we observe superconductivity, or equivalently, Bose--Einstein condensation of pairs, in two-dimensional materials?}
+\end{center}
+The answer lies in the nature of the pair dispersion relation.  
+In presence of a Fermi sea, the Pauli exclusion principle restricts the available momentum states for pairing, causing the centre-of-mass motion of the pairs to deviate from the free-particle quadratic law.  
+As a result, the pair dispersion becomes approximately \emph{linear} rather than quadratic: this modification is directly linked to the strength of the underlying attractive interaction between fermions, which determines whether the system behaves in the weak- or strong-coupling limit.
+
+\subsection*{Weak-coupling regime: BCS Limit}
+
+In the weak-coupling limit, the attractive interaction between fermions is small compared to the Fermi energy, a condition quantified by the dimensionless ratio
+\[
+\frac{E_b}{\varepsilon_F} \ll 1,
+\]
+where \(E_b\) denotes the pair binding energy and \(\varepsilon_F\) the Fermi energy.  
+In this regime, the binding energy of a Cooper pair is much smaller than the characteristic energy scale of the Fermi sea.  
+The pairs are therefore highly delocalized in real space, with sizes much larger than the average interparticle distance, and they overlap extensively with one another.  
+Because of this strong overlap, pair formation and condensation occur simultaneously at the same temperature \(T_c\), a defining feature of the \textit{BCS limit}:
+\[
+T_{\text{pair formation}} = 
+T_{\text{condensation}} = T_c
+\]
+
+Microscopically, Cooper pairs form within the filled Fermi sea.  
+However, the Pauli exclusion principle forbids the constituent fermions from occupying states already filled below the Fermi surface, restricting the available momentum states for pairing.  
+This exclusion modifies the pair’s centre-of-mass motion: instead of moving freely as in vacuum, the pair interacts with the background Fermi sea.  
+Consequently, its energy no longer follows the free-particle quadratic dependence on momentum but becomes approximately \textit{linear}:
+\begin{equation}
+    \varepsilon_K \approx \alpha(d)\, \hbar v_F\, K,
+    \label{eq:linear_dispersion}
+\end{equation}
+where \(v_F\) is the Fermi velocity and \(\alpha(d)\) is a dimension-dependent coefficient, which values are \(\alpha(2) = 2/\pi\), \(\alpha(3) = 1/2\).  
+This linear dispersion reflects the coupling of the pair’s motion to collective excitations near the Fermi surface and is a direct consequence of Pauli blocking.
+
+Substituting \(s = 1\), $C_1 = \alpha(d)\, \hbar v_F$ into the generalized critical temperature formula~\eqref{eq:Tc_general_1}, we obtain another special case\footnote{For the full derivation, see Appendix \ref{app:BCS_BEC-derivation}, section \ref{app:Tc_linear_dispersion}.}:
+\begin{equation}
+\boxed{
+    T_c = \frac{\alpha(d)\,\hbar v_F}{k_B}
+    \left[
+        \frac{\pi^{(d+1)/2}\, n_B}
+             {\Gamma\!\left[(d+1)/2\right]\, g_d(1)}
+    \right]^{1/d}}\,.
+    \label{eq:Tc_linear_dispersion}
+\end{equation}
+This expression shows that for linear dispersion, the condensation temperature \(T_c\) remains finite for all \(d > 1\), thereby resolving the apparent paradox of superconductivity in quasi-two-dimensional systems.
+
+\paragraph{Pair Breakup and the Finite Critical Temperature}
+The previous analysis assumes the existence of ``unbreakable'' Cooper pairs, i.e.\ bound states that persist for all centre-of-mass momenta (CMM) from \(K = 0\) to \(K \to \infty\).  
+In this idealized case, the integration over all momenta in the number equation leads to the result~\eqref{eq:Tc_linear_dispersion} for the condensation temperature.  
+However, in a more realistic scenario, Cooper pairs can dissociate into two unpaired fermions once their total momentum exceeds a finite value \(K_0\).  
+This critical momentum corresponds to the point where the pair binding energy vanishes,
+\[
+\Delta_{K_0} = 0,
+\]
+and defines the upper limit for the existence of stable pairs.
+
+The breakup momentum \(K_0\) increases with the coupling strength:  
+in the weak-coupling limit it is approximately
+\[
+K_0 \simeq \frac{\Delta_0}{a(d)\,\hbar v_F},
+\]
+and tends to infinity as the coupling becomes very strong (\(\Delta_0 \to \infty\)).  
+Physically, \(K_0\) represents the maximum centre-of-mass momentum that a Cooper pair can sustain before dissociating into unpaired fermions.
+
+By replacing the upper integration limit in the number equation with \(K_0\),  
+the total boson number can be expressed in its general \(d\)-dimensional form as
+\begin{equation}
+N_{d\mathrm{D}} 
+= \int_0^{\varepsilon_{K_0}} D_{d\mathrm{D}}(\varepsilon)\, f(\varepsilon)\, d\varepsilon
+= \int_{|\mathbf K|\le K_0}\!\frac{d^d K}{(2\pi)^d}\, f(\varepsilon_K)
+= \int_{|\mathbf K|\le K_0}\!\frac{d^d K}{(2\pi)^d}\,
+      \frac{1}{e^{\beta(\varepsilon_K-\mu)} - 1}.
+\end{equation}
+
+From this modified number equation, it's possible to derive the asymptotic behaviour of the critical temperature in the limit of vanishing pair binding energy (\(\Delta_0 \to 0\)):
+\begin{equation}
+\boxed{
+T_c \simeq
+\frac{(d-1)\,[2\pi a(d)\hbar v_F]^d\, n_B}
+{A_d\, k_B\, \Delta_0^{\,d-1}}
+\quad \xrightarrow[\Delta_0 \to 0]{} \infty}\, ,
+\label{eq:Tc_divergent}
+\end{equation}
+where \(A_2 = 2\pi\) and \(A_3 = 4\pi/3\).
+
+Equation~\eqref{eq:Tc_divergent} shows that, as the pair binding energy \(\Delta_0\) approaches zero, the predicted critical temperature diverges.  
+This unphysical result arises because, in this limit, all remaining pairs occupy the \(K = 0\) state at any temperature, implying that the system would be condensed at all \(T\).  
+Physically, this corresponds to a situation in which the pair breakup threshold disappears, and every pair remains bound regardless of thermal excitation.
+
+In practice, however, Cooper pairs do not remain bound for arbitrarily large centre-of-mass momenta.
+Above a finite threshold $K_0$ the attractive interaction is no longer strong enough to keep the electrons paired, and the pair breaks apart into two unbound fermions.\\
+When this physically unavoidable pair-breaking process happens, resulting in a more realistic \textit{binary boson–fermion mixture}, the artificial divergence of $T_c$ disappears.
+The available phase space for bosonic excitations becomes finite, and the critical temperature is “regularized’’ to a finite value. Remarkably, this corrected $T_c$ turns out to be very close to the one predicted by the ideal Bose gas expression~\eqref{eq:Tc_linear_dispersion}, confirming that the divergence arose solely from the unphysical assumption of unbreakable pairs extending to infinite momentum.
+
+\subsection*{Strong-coupling regime: BEC Limit}
+In the strong-coupling limit, the attractive interaction between fermions dominates over the Fermi energy, a condition expressed by
+\[
+\frac{E_b}{\varepsilon_F} \gg 1.
+\]
+Here, the pair binding energy \(E_b\) is much larger than the characteristic energy scale of the Fermi sea.  
+As a result, electrons form tightly bound pairs even in the absence of a Fermi surface, and these pairs behave as compact composite bosons.  
+Their spatial size becomes much smaller than the average interparticle spacing, and the overlap between different pairs is negligible.  
+Pair formation and condensation therefore occur as two distinct processes: pairs form at a higher temperature and subsequently undergo Bose--Einstein condensation into the lowest-energy state at a lower temperature \(T_c\).  
+This behaviour can be schematically represented as:
+\[
+\begin{cases}
+\textbf{High temperature: } T > T^{\ast} &
+\Rightarrow \text{no bound pairs},\quad \Delta_0 = 0,\; n_B = 0, \\[6pt]
+\textbf{Preformed pairs: } T_c < T < T^{\ast} &
+\Rightarrow \text{bound pairs w/o coherence},\quad \Delta_0 > 0,\; n_0 = 0,\; \mu < 0, \\[6pt]
+\textbf{Condensed phase: } T \leq T_c &
+\Rightarrow \text{BEC of pairs},\quad \Delta_0 > 0,\; n_0 > 0,\; \mu < 0.
+\end{cases}
+\]
+
+where \(T^{\ast}\) denotes the \textit{pairing temperature} at which bound states first appear, 
+\(T_c\) is the \textit{condensation temperature}, 
+\(\Delta_0\) the pair binding energy at zero momentum, 
+\(n_B\) the total pair density, and \(n_0\) the condensate density.
+
+In this regime, the centre-of-mass motion of each pair is no longer influenced by Pauli blocking, since the constituent fermions occupy bound molecular states well below the Fermi level.  
+The excitation energy of a pair thus follows the free-particle, \textit{quadratic} dispersion characteristic of a boson with total mass \(2m\):
+\[
+    \varepsilon_K = \frac{\hbar^2 K^2}{2(2m)}.
+    \label{eq:quadratic_dispersion}
+\]
+The chemical potential becomes negative (\(\mu < 0\)), lying below the bottom of the conduction band, as expected for a gas of bound molecules. 
+
+Substituting \(s = 2\) and \(C_2 = \hbar^2 / (2M)\), with $M = 2m$, into the generalized expression~\eqref{eq:Tc_general_1} yields\footnote{% 
+For the full derivation, see Appendix \ref{app:BCS_BEC-derivation}, section \ref{d3s2}.
+} the standard result for a three-dimensional Bose gas:
+\begin{equation}
+    T_c = \frac{2\pi \hbar^2}{M k_B}
+          \left[\frac{n_B}{\zeta(3/2)}\right]^{2/3}.
+    \label{eq:Tc_strong_coupling}
+\end{equation}
+
+This quadratic dispersion corresponds to the \textit{BEC limit} of superconductivity, where tightly bound, localized pairs behave as independent bosons that condense into a single macroscopic quantum state.  
+
+
+
+\bigskip
+\bigskip
+\noindent
+In the previous chapters, we have developed a microscopic description of superconductivity: we explained how Cooper pairs form, how superconductivity can be viewed as a Bose--Einstein condensation of pairs, and how the system spans the weak (BCS) and strong (BEC) coupling limits.  \\
+We now turn to the \emph{macroscopic} consequences of this condensate, \textit{i.e.} how a complex order parameter varies in space, how it couples to electromagnetic fields, and how measurable responses such as currents, magnetization, and characteristic length scales emerge.  
+To explore these large-scale behaviours, we introduce the Landau--Ginzburg theory, a phenomenological approach that links the quantum condensate to the observable properties of real superconductors.
+
+
+
+
+
+
+
+
