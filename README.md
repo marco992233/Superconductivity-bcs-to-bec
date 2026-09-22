@@ -9,6 +9,8 @@ The thread running through it is a single question — *what is actually condens
 do we describe it at each scale?* — asked five times, each chapter answering the one the
 previous left open.
 
+📄 **[Read the report](Superconductivity_BCS_to_BEC.pdf)**
+
 ## Why this is here
 
 Superconducting qubits are the dominant platform in quantum computing, and they are built
@@ -54,14 +56,34 @@ the argument stays readable: the London equation solutions, the Cooper integral 
 the 3D density of states and the Gamma-zeta integrals, the generalised critical temperature,
 and the variational derivation of both Ginzburg-Landau equations.
 
-## Building from source
+## Sources
+
+The full LaTeX sources are in [`src/`](src/), built on the official Politecnico di Milano
+thesis class:
+
+```
+src/
+├── main.tex                  # document root — chapter order is set here
+├── References.bib
+├── Abstract/
+├── Chapters/                 # one folder per chapter, each with its own Images/
+├── Appendix/
+├── Configuration_Files/      # PoliMi3i_thesis.cls and config.tex
+└── Images/                   # institutional logos used by the title page
+```
+
+Note that the chapter *folder* numbering does not follow the order of the document: the
+sequence is the one declared by the `\input` commands in `main.tex`.
+
+To build:
 
 ```bash
 cd src
 latexmk -pdf main.tex
 ```
 
-Requires a standard TeX distribution with `biber` or `bibtex`.
+Requires a standard TeX distribution. The class file is included, so no separate template
+installation is needed.
 
 ## Corrections
 
@@ -72,8 +94,9 @@ including a trivial one — open an issue. I would rather know.
 
 [CC BY-NC-ND 4.0](LICENSE). You may read, share and cite this work with attribution. You may
 not use it commercially or distribute modified versions. Figures marked *"Image adapted
-from"* are reproduced from the cited sources and remain the property of their respective
-copyright holders.
+from"* are reproduced from the sources cited in the bibliography and remain the property of
+their respective copyright holders; the same applies to the Politecnico di Milano marks in
+`src/Images/`.
 
 ## Citation
 
